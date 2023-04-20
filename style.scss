@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body{
+        max-width:100%;
+        min-height: 960px;
+        background-color:  hsl(0, 0%, 94%);
+       font-size: 32px;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+/**********************************************Section**************************************/
+    .container{
+        width: 1440px;
+        height:650px;
+        display: flex;
+        justify-content: center;
+    }
+    .wrapper{
+        //max-width: 815px;
+        position: relative;
+        width: 56%;
+        max-height: 650px;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.1fr  0.1fr 1fr;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 20px 20px 170px 20px;
+    }
+
+
+
+/**********************************************Input**************************************/
+    header{
+        position: relative;
+        width: 70%;
+        display:flex;
+        grid-template-rows: 1fr;
+        gap:6%;
+        padding-left: 55px;
+        p{
+            font-size: 0.3em;
+        }
+        .input{
+            width: 100%;
+       
+            input{
+                border-radius: 5px;
+                position: relative;
+                width:100%;
+                height: 75px;
+                padding-left: 20px;
+                font-weight: 700;
+                font-size: 1em;
+                border:1px solid hsl(0, 0%, 86%);
+                border-radius: 10px;
+                margin-top: 18px;
+               
+            } 
+            #day,#month,#year{
+                margin-top: 50px;
+                margin-bottom: -10px;
+                color:hsl(0, 1%, 44%);
+                font-size: 0.5em;
+                font-weight: 800;
+            }
+        
+            .validation{
+               color:red;
+               visibility: hidden;
+                margin-top: 3px;
+                font-size: 0.3em;
+                font-weight: 400;
+                font-style: italic;
+            }
+            
+        }
+    
+    }
+
+/******************************************Horizontal line***********************************/
+    hr{
+        margin:30px 0px 0px 55px;
+        width:80% ;
+        border:1px solid hsl(0, 0%, 86%);
+        height: 1px;
+    }
+    
+/**********************************************Img btn**************************************/
+    .for_figure{
+                width: 95%;
+                display: flex;
+                justify-content: end;
+            figure{
+            margin-top: -55px;
+            width: 95px;
+            height: 95px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: hsl(259, 100%, 65%);
+                border-radius: 50%;
+                z-index: 1;
+            .svg{
+                background-color: hsl(259, 100%, 65%);
+                border-radius: 50%; 
+                }
+        }
+        figure:hover{
+            cursor: pointer;
+        }
+    }
+
+/**********************************************Result**************************************/
+
+    .result{
+        margin: -30px 0 0 50px; 
+        height: 100px;
+        p{ 
+            display: inline-block;
+            color:hsl(0, 0%, 8%);
+            font-family: 'Poppins';
+            font-size: 3.5em;
+            font-weight:800;
+            font-style: italic; 
+            line-height: 1;
+        }
+        span{
+            color:hsl(259, 100%, 65%);
+            font-size: 3.5em;
+            font-weight:800;
+            font-style: italic; 
+        }
+        div:nth-child(2){
+            margin-top: -50px;
+        }  
+        div:nth-child(3){
+            margin-top: -50px;
+        }  
+    }
+
+     @media(max-width:1240px){
+            .input{
+                ::placeholder{
+                    font-size: 0.8em;
+                }
+        
+            }
+        .result{
+            p,span{
+                font-size: 3em;
+            }
+            div:nth-child(2){
+                margin-top: -30px;
+            }  
+            div:nth-child(3){
+                margin-top: -30px;
+            }  
+        }
+    }
+
+
+      @media(max-width:1040px){
+        
+        .wrapper{
+            justify-items: center;
+        }
+        header{
+            width:90%;
+            padding:0px;
+        }
+
+        .input{
+            
+            ::placeholder{
+                font-size: 0.6em;
+            }
+    
+        }   
+        hr{
+            margin:45px 0px 0px 0px;
+        width:90% ;
+        border:1px solid hsl(0, 0%, 86%);
+        height: 1px; 
+        }
+        .for_figure{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            figure{
+                width: 70px;
+                height: 70px;
+                margin-top: -45px;
+            }
+        }
+        .result{
+            width: 100%;
+            margin-top: 5px;
+            margin-left: 0px;
+            div{
+                padding-left: 10px;
+            }
+          p,span{
+              font-size: 2.3em;
+          }
+          div:nth-child(2){
+              margin-top:0px;
+          }  
+          div:nth-child(3){
+              margin-top: 0px;
+          }  
+        }
+      }
+
+      @media(max-width:764px){
+        .wrapper{
+            width: 90%;
+            height: 650px;
+            border-radius: 20px 20px 80px 20px;
+        }
+        header{
+            width:90%;
+            .input{
+              
+                input{
+                    height: 60px;
+                    padding-left:10px;
+                }
+            }  
+        }
+        .for_figure{
+            figure{
+                margin-top: -35px;
+            }
+        }
+        .result{
+            padding-left: 20px;
+          p,span{
+              font-size: 2em;
+          }
+        }
+      }
+
+      @media(max-width:448px){
+        .wrapper{
+            height: 450px;
+            border-radius: 20px 20px 80px 20px;
+        }
+        header{
+            width:90%;
+            gap:5px;
+            .input{
+              #year,#month,#day{
+                font-size: 0.3em;
+                margin-top: 20px;
+              }
+                input{
+                    height: 50px;
+                    padding-left:3px;
+                    font-size: 0.7em;
+                }
+                ::placeholder{
+                    font-size: 0.7em;
+                }
+            }  
+        }
+        hr{
+            margin-top: 20px;
+        }
+        .for_figure{
+            figure{
+                width: 50px;
+                height: 50px;
+                margin-top: -43px;
+            }
+        }
+        .result{
+            padding-left: 5px;
+          p,span{
+              font-size: 1.3em;
+          }
+        }
+      }
+      @media(max-width:265px){
+        .wrapper{
+            width:100%;
+            height: 300px;
+            border-radius: 10px 10px 30px 10px;
+        }
+        header{      
+            padding-left: 3px;
+            width:100%;
+            gap:0px;
+            .input{
+              #year,#month,#day{
+                font-size: 0.2em;
+                margin-top: 20px;
+              }
+                input{
+                    height: 30px;
+                    width: 90%;
+                    padding-left:5px;
+                    font-size:0.4em;
+                }
+                ::placeholder{
+                    font-size: 0.5em;
+                }
+            }  
+        }
+        hr{
+            width: 100%;
+            margin-top: 0px;
+        }
+        .for_figure{
+            figure{
+                width: 40px;
+                height: 40px;
+                margin-top: -50px;
+            }
+            svg{
+                width: 25px;
+                height: 25px;
+            }
+        }
+        .result{
+          p,span{
+              font-size: 0.6em;
+          }
+        }
+      }
+
+
+
